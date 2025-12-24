@@ -1,9 +1,10 @@
 import { Router } from "express";
+import { addZalandoDataController } from "../controllers/zalando.controller.js";
+import { authMiddleware } from "../middlewares/auth.middleware.js";
+import { adminMiddleware } from "../middlewares/admin.middleware.js";
 
-import { addDataZalandoController } from "../controllers/zalando.controller.js";
+const router = Router();
 
-const zalandoRouter = Router();
+router.post("/", authMiddleware, adminMiddleware, addZalandoDataController);
 
-zalandoRouter.post("/", addDataZalandoController)
-
-export default zalandoRouter;
+export default router;

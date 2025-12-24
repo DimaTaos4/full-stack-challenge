@@ -28,7 +28,8 @@ const User = sequelize.define("User", {
         defaultValue: false,
     },
     retailerKey: {
-        type: DataTypes.STRING || null,
+        type: DataTypes.STRING,
+        allowNull: true,
     }
 }, {
     timestamps: true,

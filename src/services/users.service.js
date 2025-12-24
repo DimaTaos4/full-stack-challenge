@@ -7,6 +7,9 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export const createUserService = async ({ username, email, password }) => {
+    if (!username || !email || !password) {
+        throw HttpException(400, "Missing required fields: username, email, password");
+    }
     const user = await User.findOne({ where: { email } });
     if (user) {
         throw HttpException(409, `User with email '${email}' already exists`);
@@ -21,6 +24,9 @@ export const createUserService = async ({ username, email, password }) => {
 }
 
 export const loginUserService = async ({ email, password }) => {
+    if (!email || !password) {
+        throw HttpException(400, "Missing required fields: email, password");
+    }
     const user = await User.findOne({ where: { email } });
     if (!user) {
         throw HttpException(401, "Invalid email");
