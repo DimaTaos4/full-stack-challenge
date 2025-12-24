@@ -7,3 +7,6 @@ export const adminMiddleware = (req, res, next) => {
     }
     next();
 }
+
+// Middleware to check whether the user is an admin
+// Middleware zur Überprüfung, ob der Benutzer ein Administrator ist

@@ -2,6 +2,9 @@ import Zalando from "../models/Zalando/Zalando.js";
 import HttpException from "../utils/HttpException.js";
 
 export const addDataZalandoService = async ({ month, revenue }) => {
+    if (!month || !revenue) {
+        throw HttpException(400, "Month and revenue are required");
+    }
     const existingEntry = await Zalando.findOne({ where: { month } });
     if (existingEntry) {
         throw HttpException(409, `Data for month ${month} already exists`);

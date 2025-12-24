@@ -18,3 +18,6 @@ export const authMiddleware = (req, res, next) => {
         next(HttpException(401, "Invalid token"));
     }
 };
+
+// Token presence validation
+// Überprüfung auf vorhandenes Token

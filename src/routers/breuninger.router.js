@@ -14,3 +14,6 @@ breuningerRouter.post(
 );
 
 export default breuningerRouter;
+
+// Not explicitly required, but the admin creates the data for Breuninger
+// Nicht explizit erforderlich, aber der Admin erstellt die Daten für Breuninger
