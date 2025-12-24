@@ -29,7 +29,7 @@ export const loginUserService = async ({ email, password }) => {
     if (!isPasswordValid) {
         throw HttpException(401, "Invalid password");
     }
-    const token = jwt.sign({ id: user.id, email: user.email, isAdmin: user.isAdmin, retailerKey: user.retailerKey }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ id: user.id, email: user.email, isAdmin: user.isAdmin, retailerKey: user.retailerKey }, process.env.JWT_SECRET, { expiresIn: '7d' });
     return {
         id: user.id,
         username: user.username,

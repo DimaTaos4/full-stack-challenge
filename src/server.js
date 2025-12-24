@@ -8,7 +8,7 @@ import userRouter from './routers/users.router.js';
 import zalandoRouter from './routers/zalando.router.js';
 import breuningerRouter from './routers/breuninger.router.js';
 import analysisRouter from './routers/analysis.router.js';
-
+import retailersRouter from './routers/retailers.router.js';
 
 const startServer = () => {
 
@@ -21,6 +21,7 @@ const startServer = () => {
     app.use("/api/zalando", zalandoRouter);
     app.use("/api/breuninger", breuningerRouter);
     app.use("/api/analysis", analysisRouter);
+    app.use("/api/retailers", retailersRouter);
 
     app.use(notFoundHandler);
     app.use(errorHandler);
