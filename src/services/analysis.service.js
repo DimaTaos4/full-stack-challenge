@@ -12,7 +12,6 @@ export const getAnalysis = async (user, retailerKeyFromQuery) => {
         retailerKey = retailerKeyFromQuery;
     } else {
         retailerKey = user.retailerKey;
-        
     }
 
     const modelMap = {
