@@ -1,9 +1,13 @@
+import { nanoid } from "nanoid";
+
 const retailers = [
     {
+        id: nanoid(),
         key: "zalando",
         name: "Zalando",
     },
     {
+        id: nanoid(),
         key: "breuninger",
         name: "Breuninger",
     },
