@@ -97,8 +97,8 @@ npm install
 
 ### 2. Environment Variables
 
-The project requires the following environment variables.
-They are provided in the .env file included in the project archive.
+The project requires environment variables.
+Please use the `.env` file that was sent separately via email.
 
 ### 3. Run the server
 
